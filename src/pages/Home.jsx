@@ -19,7 +19,7 @@ const Home = () => {
   const handleChange = (e) => {
     const value = e.target.value;
 
-    if (value.length > 15) {
+    if (value.length >= 15) {
       setMessage("Player name cannot exceed 15 characters");
       setType("error");
     } else {
@@ -39,7 +39,7 @@ const Home = () => {
       return;
     }
 
-    if (playerName.length > 15) {
+    if (playerName.length >= 15) {
       setMessage("Player name cannot exceed 15 characters");
       setType("error");
       return;
@@ -62,8 +62,8 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen bg-white flex items-center justify-center p-4">
-      <Card className="bg-purple-100 hover:bg-purple-200 h-56">
+    <div className="bg-purple-400 min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <Card className="w-full max-w-md">
         <div className="text-center mb-8 mr-5">
           <Grid3x3 className="w-10 h-10 mx-auto text-purple-500 mb-4" />
           <h1 className="text-2 font-bold text-gray-800 mb-2">Tic-Tac-Toe</h1>
